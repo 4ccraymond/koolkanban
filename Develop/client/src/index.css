@@ -32,7 +32,7 @@ a:hover {
 }
 
 body {
-  background: #ECF0F1;
+  background: #f2d6f0;
   background-size: cover;
   background-repeat: no-repeat no-repeat;
   background-position: center center;
@@ -45,6 +45,7 @@ body {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  text-align: center;
 }
 
 button {
@@ -88,6 +89,7 @@ tbody tr:nth-child(odd) {
 .nav {
   display: flex;
   padding: 1em 2em;
+  background-color: #d17ac4;
 }
 
 .nav ul {
@@ -100,12 +102,12 @@ tbody tr:nth-child(odd) {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: larger;
-  font-weight: 900;
+  font-size: 2em;
+  font-weight: 1000;
 }
 
 .nav-title a {
-  color: #b864c4;
+  color: #ffffff;
 }
 
 .nav-item {
@@ -144,10 +146,11 @@ tbody tr:nth-child(odd) {
   border: 1px solid rgba(0, 0, 0, 0.2);
   margin: 5px;
   padding: 5px;
+  border-radius: 20px;
 }
 
 .todo {
-  background-color: #e9cbec;
+  background-color: #eeacf4;
 }
 
 .inprogress {
@@ -163,7 +166,7 @@ tbody tr:nth-child(odd) {
   background-color: #fff;
   padding: 15px;
   margin-bottom: 10px;
-  border-radius: 4px;
+  border-radius: 20px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   border: 0.1em solid black;
 }
@@ -177,6 +180,8 @@ tbody tr:nth-child(odd) {
 #create-ticket-link {
   display: block;
   margin-left: auto;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 
@@ -189,6 +194,7 @@ tbody tr:nth-child(odd) {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border-radius: 20px;
 }
 
 .form > h1, .form > label {
@@ -196,7 +202,7 @@ tbody tr:nth-child(odd) {
 }
 
 .form > input {
-  width: 200px;
+  width: 75%;
   
 }
 
@@ -206,7 +212,7 @@ tbody tr:nth-child(odd) {
 }
 
 .form button {
-  margin-top: 2.5%;
+  margin-top: 5%;
 }
 
 .form textarea {
@@ -216,19 +222,21 @@ tbody tr:nth-child(odd) {
 }
 
 .editBtn {
-  background-color: #f9f9f9;
+  background-color: #b864c4;
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
   cursor: pointer;
   transition: border-color 0.25s;
+  margin: 5px;
 }
 
 .deleteBtn {
-  background-color: #f9f9f9;
+  background-color: #b864c4;
   font-weight: 500;
   color: black;
   text-decoration: inherit;
+  margin: 5px;
 }
 
 .deleteBtn:hover {
@@ -254,4 +262,10 @@ tbody tr:nth-child(odd) {
   button {
     background-color: #f9f9f9;
   }
+}
+
+.error {
+  color: orange;
+  text-wrap: wrap;
+  width: 80%;
 }
