@@ -90,6 +90,7 @@ tbody tr:nth-child(odd) {
   display: flex;
   padding: 1em 2em;
   background-color: #d17ac4;
+  border-radius: 20px;
 }
 
 .nav ul {
@@ -189,7 +190,7 @@ tbody tr:nth-child(odd) {
   width: 60%;
   height: 80%;
   background-color: #b864c4;
-  margin: auto;
+  margin: auto + 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;

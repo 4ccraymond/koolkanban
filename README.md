@@ -1,85 +1,113 @@
+# KoolKanban 📪📋
+
+A full-stack Kanban board application with secure login, built using React, Express, PostgreSQL, and JWT-based authentication.
+
+## 🚀 Live Demo
+
+🔗 [View the Live App](https://koolkanban-1.onrender.com)
+
+🔗 [View the Backend API](https://koolkanban.onrender.com)
+
+---
+
+## 🧠 Features
+
+- 🗪 Secure login with JSON Web Tokens (JWT)
+- 🧱 Kanban board with tickets sorted by status
+- 🔒 Protected API routes
+- 📦 Token-based session handling (login/logout with expiration)
+- 🌐 Full deployment using Render (frontend & backend)
+- 🧪 Includes seed data for testing (users and tickets)
+
+---
+
+## 🛠️ Tech Stack
+
+**Frontend**
+- React + Vite
+- React Router
+- TypeScript
+- jwt-decode
+
+**Backend**
+- Node.js + Express
+- Sequelize + PostgreSQL
+- JWT Authentication
+- TypeScript
+
+**Deployment**
+- Render (Web Service + Static Site)
+- Environment variables for configuration
+
+---
+
+## 📂 Project Structure
 
 ```
-react-fullstack-challenge-14
-├─ Assets
-│  ├─ 14-00-unauthenticated-page.png
-│  ├─ 14-01-login-page.png
-│  ├─ 14-02-main-page.png
-│  └─ Insomnia_M14_Challenge.json
-├─ Develop
-│  ├─ client
-│  │  ├─ .eslintrc.cjs
-│  │  ├─ index.html
-│  │  ├─ package-lock.json
-│  │  ├─ package.json
-│  │  ├─ public
-│  │  │  └─ vite.svg
-│  │  ├─ src
-│  │  │  ├─ api
-│  │  │  │  ├─ authAPI.tsx
-│  │  │  │  ├─ ticketAPI.tsx
-│  │  │  │  └─ userAPI.tsx
-│  │  │  ├─ App.tsx
-│  │  │  ├─ assets
-│  │  │  │  └─ react.svg
-│  │  │  ├─ components
-│  │  │  │  ├─ Navbar.tsx
-│  │  │  │  ├─ Swimlane.tsx
-│  │  │  │  └─ TicketCard.tsx
-│  │  │  ├─ index.css
-│  │  │  ├─ interfaces
-│  │  │  │  ├─ ApiMessage.tsx
-│  │  │  │  ├─ TicketData.tsx
-│  │  │  │  ├─ UserData.tsx
-│  │  │  │  └─ UserLogin.tsx
-│  │  │  ├─ main.tsx
-│  │  │  ├─ pages
-│  │  │  │  ├─ Board.tsx
-│  │  │  │  ├─ CreateTicket.tsx
-│  │  │  │  ├─ EditTicket.tsx
-│  │  │  │  ├─ ErrorPage.tsx
-│  │  │  │  └─ Login.tsx
-│  │  │  ├─ utils
-│  │  │  │  └─ auth.ts
-│  │  │  └─ vite-env.d.ts
-│  │  ├─ tsconfig.json
-│  │  ├─ tsconfig.node.json
-│  │  └─ vite.config.ts
-│  ├─ package-lock.json
-│  ├─ package.json
-│  ├─ server
-│  │  ├─ .env
-│  │  ├─ db
-│  │  │  └─ schema.sql
-│  │  ├─ package-lock.json
-│  │  ├─ package.json
-│  │  ├─ src
-│  │  │  ├─ controllers
-│  │  │  │  ├─ ticket-controller.ts
-│  │  │  │  └─ user-controller.ts
-│  │  │  ├─ middleware
-│  │  │  │  └─ auth.ts
-│  │  │  ├─ models
-│  │  │  │  ├─ index.ts
-│  │  │  │  ├─ ticket.ts
-│  │  │  │  └─ user.ts
-│  │  │  ├─ routes
-│  │  │  │  ├─ api
-│  │  │  │  │  ├─ index.ts
-│  │  │  │  │  ├─ ticket-routes.ts
-│  │  │  │  │  └─ user-routes.ts
-│  │  │  │  ├─ auth-routes.ts
-│  │  │  │  └─ index.ts
-│  │  │  ├─ seeds
-│  │  │  │  ├─ index.ts
-│  │  │  │  ├─ ticket-seeds.ts
-│  │  │  │  └─ user-seeds.ts
-│  │  │  ├─ server.ts
-│  │  │  └─ types
-│  │  │     └─ express
-│  │  │        └─ index.d.ts
-│  │  └─ tsconfig.json
-│  └─ tsconfig.json
-└─ README.md
+Develop/
+├── client/         # React frontend
+├── server/         # Express backend
+│   ├── models/     # Sequelize models
+│   ├── routes/     # API + auth routes
+│   ├── seeds/      # Seed data scripts
+│   └── middleware/ # Auth middleware
+```
+
+---
+
+## 🔧 Environment Variables
+
+### For Backend (`/server/.env`)
+```
+DB_NAME=kanban_db
+DB_USER=your_db_user
+DB_PASSWORD=your_db_password
+JWT_SECRET_KEY=your_jwt_secret
+SEED_ON_START=true
+```
+
+### For Frontend (`/client/.env`)
+```
+VITE_API_URL=https://koolkanban.onrender.com
+```
+
+---
+
+## 🔐 Default Login (Seeded User)
 
 ```
+Username: testuser
+Password: password123
+```
+
+Use this after deploying to test login functionality with seeded data.
+
+---
+
+## 🥪 Testing the App Locally
+
+```bash
+# From root /Develop
+npm install
+npm run seed
+npm run start:dev
+```
+
+Then visit `http://localhost:5173` to view the frontend.
+
+---
+
+## 🙌 Acknowledgements
+
+- 💻 Starter code provided by [University of Utah Coding Bootcamp](https://bootcamps.learn.utoronto.ca/coding/)
+- 🧠 JWT setup and validation inspired by official [jsonwebtoken](https://github.com/auth0/node-jsonwebtoken) docs
+- 🧪 Testing API via [Insomnia](https://insomnia.rest/)
+- 🌎 Hosting & deployment via [Render](https://render.com)
+- 🤝 Thanks to instructional staff, TAs, and classmates for support and feedback throughout development
+
+---
+
+## 📜 License
+
+This project is for educational purposes only and is not licensed for production use.
+
