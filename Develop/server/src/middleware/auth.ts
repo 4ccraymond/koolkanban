@@ -27,5 +27,9 @@ export const authenticateToken = (
 
     req.user = decoded as JwtPayload;
     next();
+
+    return;
   });
+
+  return;
 };
