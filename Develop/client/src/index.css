@@ -173,8 +173,9 @@ tbody tr:nth-child(odd) {
 }
 
 .container {
-  /* margin: auto; */
+  margin: auto;
   width: 100%;
+  justify-content: center;
   /* height: 90%; */
 }
 
