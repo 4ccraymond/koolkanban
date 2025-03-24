@@ -173,9 +173,8 @@ tbody tr:nth-child(odd) {
 }
 
 .container {
-  margin: auto;
+  /* margin: auto; */
   width: 100%;
-  justify-content: center;
   /* height: 90%; */
 }
 
@@ -191,7 +190,7 @@ tbody tr:nth-child(odd) {
   width: 60%;
   height: 80%;
   background-color: #b864c4;
-  margin: auto + 10px;
+  margin: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
