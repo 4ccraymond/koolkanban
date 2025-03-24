@@ -1,4 +1,4 @@
-const forceDatabaseRefresh = true; // ← temporarily force DB reset for seeding
+const forceDatabaseRefresh = false; // ← temporarily force DB reset for seeding
 
 import dotenv from 'dotenv';
 dotenv.config();
