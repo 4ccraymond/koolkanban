@@ -27,7 +27,7 @@ export const login = async (req: Request, res: Response) => {
     const token = jwt.sign(payload, process.env.JWT_SECRET_KEY as string, {
       expiresIn: '1h'
     });
-
+    console.log(token);
     res.json({ token });
 
   } catch (err) {
